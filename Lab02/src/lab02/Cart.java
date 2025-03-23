@@ -8,7 +8,7 @@ public class Cart {
 
     //add DVD to the cart
     public void addDigitalVideoDisc(DigitalVideoDisc item){
-        if(qtyOrdered == MAX_NUMBERS_ORDERED -1){
+        if(qtyOrdered == MAX_NUMBERS_ORDERED ){
             System.out.println("The cart is almnost full");
         }else{
             itemOrdered[qtyOrdered] = item;
@@ -17,6 +17,35 @@ public class Cart {
         }
     }
 
+    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList){
+        for(DigitalVideoDisc dvd : dvdList){
+            if(qtyOrdered == MAX_NUMBERS_ORDERED){
+                System.out.println("The cart is almnost full");
+                break;
+            }
+            itemOrdered[qtyOrdered] = dvd;
+            qtyOrdered++;
+            System.out.println("The dvd with title " + dvd.getTitle() + " has been added to the cart");
+        }
+    }
+
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2){
+        if (qtyOrdered == MAX_NUMBERS_ORDERED){
+            System.out.println("Do not have enough space to add both DVD");
+        }else{
+            if(qtyOrdered == MAX_NUMBERS_ORDERED - 1){
+                itemOrdered[qtyOrdered++]=dvd1;
+                System.out.println("The dvd with title " + dvd1.getTitle() + " has been added to the cart");
+                System.out.println("After add dvd1,the cart is full, cant not add dvd2");
+            }else {
+                itemOrdered[qtyOrdered++] = dvd1;
+                System.out.println("The dvd with title " + dvd1.getTitle() + " has been added to the cart");
+                itemOrdered[qtyOrdered++] = dvd2;
+                System.out.println("The dvd with title " + dvd2.getTitle() + " has been added to the cart");
+            }
+
+        }
+    }
     //remove DVD to cart
     boolean found =false;
     public void removeDigitalVideoDisc(DigitalVideoDisc item){
@@ -49,5 +78,13 @@ public class Cart {
             total+=itemOrdered[i].getCost();
         }
         return total;
+    }
+
+    //display
+    public void display(){
+        System.out.println("The cart has " + qtyOrdered + " DVDs: ");
+        for(int i = 0; i < qtyOrdered; i ++){
+            System.out.println(itemOrdered[i].getTitle());
+        }
     }
 }

@@ -11,10 +11,24 @@ public class Aims {
         anOrder.addDigitalVideoDisc(dvd2);
 
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
-        anOrder.addDigitalVideoDisc(dvd3);
+        //anOrder.addDigitalVideoDisc(dvd3);
+
+        DigitalVideoDisc dvd4 = new DigitalVideoDisc("Harry Potter", "Witch", 20.54f);
+       // anOrder.addDigitalVideoDisc(dvd4);
+        DigitalVideoDisc[] dvdArray ={dvd3, dvd4};
+        anOrder.addDigitalVideoDisc(dvdArray);
+
+        //display
+        anOrder.display();
+
+        //remove item from cart
+        anOrder.removeDigitalVideoDisc(dvd4);
+        anOrder.display();
+
+
 
         //Total cost
-        System.out.println(anOrder.totalCost());
+        System.out.println("Total cost : " + anOrder.totalCost());
 
     }
 }

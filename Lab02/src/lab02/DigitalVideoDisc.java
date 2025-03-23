@@ -1,26 +1,57 @@
 package lab02;
 public class DigitalVideoDisc {
-    private String title;
+    private  String title;
     private String category;
     private String director;
     private int length;
     private float cost;
+    private static int nbDigitalVideoDiscs = 0;
+    private int id;
+
+
+    public static void setNbDigitalVideoDiscs(int nbDigitalVideoDiscs) {
+        DigitalVideoDisc.nbDigitalVideoDiscs = nbDigitalVideoDiscs;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
 
     public String getTitle() {
         return this.title;
     }
 
+    public void setTitle(String title) {
+        this.title=title;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     public String getCategory() {
         return this.category;
+    }
+
+    public void setDirector(String director) {
+        this.director = director;
     }
 
     public String getDirector() {
         return this.director;
     }
 
+    public void setLength(int length) {
+        this.length = length;
+    }
+
     public int getLength() {
         return this.length;
+    }
+
+    public void setCost(float cost) {
+        this.cost = cost;
     }
 
     public float getCost() {
@@ -31,6 +62,8 @@ public class DigitalVideoDisc {
     public DigitalVideoDisc(String title) {
         super();
         this.title = title;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     //DVD obj by all attributes
@@ -40,12 +73,16 @@ public class DigitalVideoDisc {
         this.director = director;
         this.length = length;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
     //DVD by category, title, cost
     public DigitalVideoDisc(String category,String title, float cost){
         this.category = category;
         this.title = title;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     //DVD by director, category, title,cost
@@ -54,5 +91,9 @@ public class DigitalVideoDisc {
         this.category = category;
         this.title = title;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
+
+
 }
