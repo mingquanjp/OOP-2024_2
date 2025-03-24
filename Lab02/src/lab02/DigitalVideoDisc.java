@@ -85,6 +85,7 @@ public class DigitalVideoDisc {
         this.id = nbDigitalVideoDiscs;
     }
 
+    //pull rq  topic/classifier-and-instance-member
     //DVD by director, category, title,cost
     public DigitalVideoDisc(String director, String category, String title, float cost){
         this.director = director;
