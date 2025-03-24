@@ -16,7 +16,7 @@ public class Cart {
             System.out.println("The dvd with title " + item.getTitle() + " has been added to the cart");
         }
     }
-/*
+
     public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList){
         for(DigitalVideoDisc dvd : dvdList){
             if(qtyOrdered == MAX_NUMBERS_ORDERED){
@@ -29,9 +29,9 @@ public class Cart {
         }
     }
 
- */
 
-    /*
+
+
     public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2){
         if (qtyOrdered == MAX_NUMBERS_ORDERED){
             System.out.println("Do not have enough space to add both DVD");
@@ -50,7 +50,7 @@ public class Cart {
         }
     }
 
-     */
+
 
     //remove DVD to cart
     boolean found =false;

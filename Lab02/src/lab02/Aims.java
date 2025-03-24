@@ -16,7 +16,7 @@ public class Aims {
         DigitalVideoDisc dvd4 = new DigitalVideoDisc("Harry Potter", "Witch", 20.54f);
        // anOrder.addDigitalVideoDisc(dvd4);
         DigitalVideoDisc[] dvdArray ={dvd3, dvd4};
-       // anOrder.addDigitalVideoDisc(dvdArray);
+        anOrder.addDigitalVideoDisc(dvdArray);
 
         //display
         anOrder.display();
