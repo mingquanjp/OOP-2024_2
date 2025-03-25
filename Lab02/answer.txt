@@ -1,17 +1,26 @@
 Question1: Is JAVA a Pass by Value or a Pass by Reference programming language?
 
-Answer : Java là một ngôn ngữ lập trình truyền tham trị (pass-by-value)
+--> Java là một ngôn ngữ lập trình truyền tham trị (pass-by-value)
+
 
 
 Question2 :After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two
 objects still remain?
 
-Answer : Java là ngôn ngữ truyền tham trị, khi ta truyền đối tượng vào phương thức, chỉ có bản sao của tham chiếu được truyền vào. Trong phương thức swap, ta hoán đổi hai tham chiếu cục bộ (o1 và o2), nhưng điều này không ảnh hưởng đến tham chiếu gốc (jungleDVD và cinderellaDVD) bên ngoài phương thức -> Không có sự thay đổi 
+--> Java là ngôn ngữ truyền tham trị, khi ta truyền đối tượng vào phương thức, chỉ có bản sao của tham chiếu được truyền vào. Trong phương thức swap, ta hoán đổi hai tham chiếu cục bộ (o1 và o2), nhưng điều này không ảnh hưởng đến tham chiếu gốc (jungleDVD và cinderellaDVD) bên ngoài phương thức -> Không có sự thay đổi 
+
+
 
 Question3: After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed?
 
-Trong phương thức changeTitle, khi ta gọi dvd.setTitle(title) làm trực tiếp thay đổi tiêu đề của đối tượng mà dvd đang trỏ đến (chính là jungleDVD). Vì dvd và jungleDVD cùng trỏ đến một đối tượng, nên thay đổi này ảnh hưởng trực tiếp đến jungleDVD.
+--> Trong phương thức changeTitle, khi ta gọi dvd.setTitle(title) làm trực tiếp thay đổi tiêu đề của đối tượng mà dvd đang trỏ đến (chính là jungleDVD). Vì dvd và jungleDVD cùng trỏ đến một đối tượng, nên thay đổi này ảnh hưởng trực tiếp đến jungleDVD.
 
 Dòng dvd = new DigitalVideoDisc(oldTitle) tạo một đối tượng mới và gán cho tham chiếu cục bộ dvd. Tuy nhiên, điều này không ảnh hưởng đến tham chiếu gốc (jungleDVD) bên ngoài phương thức.
+
+
+
+Question4: If you create a constructor method to build a DVD by title then create a constructor method to build a DVD by category. Does JAVA allow you to do this?
+
+--> Java không cho phép ta làm điều này bởi 2 phương thức có cùng số lượng tham số và cùng kiểu dữ liệu. Để giải quyết vấn đề này có thể phân biệt bằng số lượng hoặc loại tham số của các constructor để tránh trùng lặp.
 
 
