@@ -1,22 +1,25 @@
 package hust.soict.hedspi.aims.store;
 
-import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
+import hust.soict.hedspi.aims.media.DigitalVideoDisc;
+import hust.soict.hedspi.aims.media.Media;
 
 import java.util.ArrayList;
 
 public class Store {
-    private ArrayList<DigitalVideoDisc> itemsInStore = new ArrayList<>(); //dynamic list
+   private ArrayList<Media> itemsInStore = new ArrayList<Media>();
 
-    public void addDVD(DigitalVideoDisc item){
-        itemsInStore.add(item);
-        System.out.println("The dvd with title " + item.getTitle() + " has been added to the cart");
+    public void addMedia(Media media){
+        if (!itemsInStore.contains(media)){
+            itemsInStore.add(media);
+            System.out.println("Added Media: " + media);
+        }
     }
 
-    public void removeDVD(DigitalVideoDisc item) {
-        if (itemsInStore.remove(item)) {
-            System.out.println("The dvd with title " + item.getTitle() + " has been removed from the cart");
+    public void removeMedia(Media media) {
+        if (itemsInStore.remove(media)) {
+            System.out.println("The dvd with title " + media.getTitle() + " has been removed from the cart");
         } else {
-            System.out.println("Can not found the dvd with title " + item.getTitle());
+            System.out.println("Can not found the dvd with title " + media.getTitle());
         }
     }
 
@@ -31,5 +34,14 @@ public class Store {
             }
         }
   }
+
+    public Media findMediaByTitle(String title) {
+        for (Media media : itemsInStore) {
+            if (media.getTitle().equalsIgnoreCase(title)) {
+                return media;
+            }
+        }
+        return null;
+    }
 
 }
