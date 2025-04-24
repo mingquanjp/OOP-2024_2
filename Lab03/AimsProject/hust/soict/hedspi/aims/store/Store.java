@@ -4,6 +4,7 @@ import hust.soict.hedspi.aims.media.DigitalVideoDisc;
 import hust.soict.hedspi.aims.media.Media;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Store {
    private ArrayList<Media> itemsInStore = new ArrayList<Media>();
@@ -34,6 +35,15 @@ public class Store {
             }
         }
   }
+
+    // Getter and Setter
+    public List<Media> getItemsInStore() {
+        return itemsInStore;
+    }
+
+    public void setItemsInStore(List<Media> itemsInStore) {
+        this.itemsInStore = (ArrayList<Media>) itemsInStore;
+    }
 
     public Media findMediaByTitle(String title) {
         for (Media media : itemsInStore) {

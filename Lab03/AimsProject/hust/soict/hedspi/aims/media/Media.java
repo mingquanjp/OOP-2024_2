@@ -7,17 +7,19 @@ public abstract class Media {
     private String title;
     private String category;
     private float cost;
+    private static int nbMedia = 0;
 
     public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
     public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost();
 
     //constructor
     public Media(String title){
-
-        super();
+        this.id = ++nbMedia;
+        this.title = title;
     }
 
     public Media(String title, String category, float cost) {
+        this.id = ++nbMedia;
         this.title = title;
         this.category = category;
         this.cost = cost;

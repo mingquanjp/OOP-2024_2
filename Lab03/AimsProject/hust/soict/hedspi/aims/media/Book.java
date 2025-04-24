@@ -46,4 +46,8 @@ public class Book extends Media{
 
 
     }
+
+    public String toString() {
+        return "Book - Title: " + getTitle() + " - Category: " + getCategory() + " - Authors: " + getAuthors();
+    }
 }

@@ -38,8 +38,10 @@ public class DigitalVideoDisc extends Disc implements Playable {
 
     //commit for pullrequest
 
-    public boolean isMatch(String title) {
-        return this.getTitle().equalsIgnoreCase(title);
+    //toString method
+    @Override
+    public String toString() {
+        return "DVD - Title : " + this.getTitle() + " - Category : " + this.getCategory() + " - Director : " + this.getDirector() + " - Length : " + this.getLength() + " - Price : " + this.getCost() + "\n";
     }
 
 

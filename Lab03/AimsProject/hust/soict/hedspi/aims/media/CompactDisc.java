@@ -30,6 +30,10 @@ public class CompactDisc extends Disc implements Playable{
         return artist;
     }
 
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
+
     public void addTrack(Track track){
         if(!tracks.contains(track)){
             tracks.add(track);
@@ -53,6 +57,11 @@ public class CompactDisc extends Disc implements Playable{
             totalLength += track.getLength();
         }
         return totalLength;
+    }
+
+    @Override
+    public String toString(){
+        return "CD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + this.getLength();
     }
 
 
