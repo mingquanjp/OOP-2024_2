@@ -15,7 +15,7 @@ public class DigitalVideoDisc extends Disc implements Playable {
 
     //DVD obj by all attributes
     public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
-        super(title,category,director,length);
+        super(title,category,director,length,cost);
     }
     //DVD by category, title, cost
     public DigitalVideoDisc(String category,String title, float cost){
