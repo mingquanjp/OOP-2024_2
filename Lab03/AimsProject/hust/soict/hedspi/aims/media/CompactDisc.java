@@ -51,6 +51,7 @@ public class CompactDisc extends Disc implements Playable{
         }
     }
 
+    /*
     public int getLength(){
         int totalLength = 0;
         for(Track track : tracks){
@@ -59,9 +60,11 @@ public class CompactDisc extends Disc implements Playable{
         return totalLength;
     }
 
+     */
+
     @Override
     public String toString(){
-        return "CD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + this.getLength() + " - " + this.getCost() + " - "+ this.getArtist();
+        return "CD - Title : " + this.getTitle() + " - Category : " + this.getCategory() + " - Director : " + this.getDirector() + " - Length :  " + this.getLength() + " - " + this.getCost() + " - "+ this.getArtist();
     }
 
 

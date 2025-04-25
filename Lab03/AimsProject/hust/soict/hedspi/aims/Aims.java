@@ -3,6 +3,7 @@ import hust.soict.hedspi.aims.cart.Cart;
 import hust.soict.hedspi.aims.media.*;
 import hust.soict.hedspi.aims.store.Store;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -11,6 +12,8 @@ public class Aims {
         Store store = new Store();
         Cart cart = new Cart();
         Scanner scanner = new Scanner(System.in);
+        ArrayList<Track> tracks = new ArrayList<Track>();
+
 
 
         //Add dvd
