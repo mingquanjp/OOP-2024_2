@@ -15,6 +15,7 @@ public class Store {
         }
     }
 
+    //remove method
     public void removeMedia(Media media) {
         if (itemsInStore.remove(media)) {
             System.out.println("The dvd with title " + media.getTitle() + " has been removed from the cart");
@@ -22,6 +23,7 @@ public class Store {
             System.out.println("Can not found the dvd with title " + media.getTitle());
         }
     }
+
 
   public void displayStore(){
         System.out.println("**********************CART***********************\n");
