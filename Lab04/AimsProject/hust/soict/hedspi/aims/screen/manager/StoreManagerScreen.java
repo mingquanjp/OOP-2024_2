@@ -144,7 +144,7 @@ public class StoreManagerScreen extends JFrame{
 
         Media cd4 = new CompactDisc("The Dark Side of the Moon", "Progressive Rock", "Pink Floyd", 13.25f);
         Media cd5 = new CompactDisc("Back in Blacks", "Rocks", "AC/DsC", 11.99f);
-        Media dvd4 = new DigitalVideoDisc("Pulp Fiction", "Crime", 10.75f);
+        Book book1 = new Book("The Art of War", "History", 10.99f);
 
 
 
@@ -160,7 +160,7 @@ public class StoreManagerScreen extends JFrame{
 
         store.addMedia(cd4);
         store.addMedia(cd5);
-        store.addMedia(dvd4);
+        store.addMedia(book1);
 
         new StoreManagerScreen(store);
     }
